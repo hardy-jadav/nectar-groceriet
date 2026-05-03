@@ -50,7 +50,7 @@ const HomeProductCard: React.FC<{ product: Product }> = ({ product }) => {
             e.stopPropagation();
             addToCart(product);
           }}
-          className="w-[45px] h-[45px] bg-[#53b175] rounded-full flex items-center justify-center active:opacity-80 transition-opacity cursor-pointer flex-shrink-0"
+          className="w-[45px] h-[45px] bg-[#53b175] rounded-[12px] flex items-center justify-center active:opacity-80 transition-opacity cursor-pointer flex-shrink-0"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round">
             <line x1="12" y1="5" x2="12" y2="19" />
@@ -111,7 +111,7 @@ const DesktopProductCard: React.FC<{ product: Product }> = ({ product }) => {
         <span className="text-[#181725] font-bold text-[18px]">${product.price.toFixed(2)}</span>
         <button
           onClick={(e) => { e.stopPropagation(); addToCart(product); }}
-          className="w-[42px] h-[42px] bg-[#53b175] rounded-full flex items-center justify-center active:opacity-80 cursor-pointer flex-shrink-0 hover:bg-[#44a367] transition-colors"
+          className="w-[45px] h-[45px] bg-[#53b175] rounded-[12px] flex items-center justify-center active:opacity-80 cursor-pointer flex-shrink-0 hover:bg-[#44a367] transition-colors"
         >
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round">
             <line x1="12" y1="5" x2="12" y2="19" />

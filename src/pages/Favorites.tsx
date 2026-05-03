@@ -174,7 +174,7 @@ const Favorites: React.FC = () => {
                         e.stopPropagation();
                         addToCart(product);
                       }}
-                      className="bg-[#53b175] rounded-[12px] w-[44px] h-[44px] flex items-center justify-center cursor-pointer hover:bg-[#44a367] transition-colors flex-shrink-0"
+                      className="bg-[#53b175] rounded-[12px] w-[45px] h-[45px] flex items-center justify-center cursor-pointer hover:bg-[#44a367] transition-colors flex-shrink-0"
                     >
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round">
                         <line x1="12" y1="5" x2="12" y2="19" />

@@ -81,7 +81,7 @@ const CategoryProductCard: React.FC<{ product: Product }> = ({ product }) => {
             e.stopPropagation();
             addToCart(product);
           }}
-          className="bg-[#53b175] rounded-[12px] w-[50px] h-[50px] flex items-center justify-center cursor-pointer active:opacity-80 transition-opacity flex-shrink-0"
+          className="bg-[#53b175] rounded-[12px] w-[45px] h-[45px] flex items-center justify-center cursor-pointer active:opacity-80 transition-opacity flex-shrink-0"
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round">
             <line x1="12" y1="5" x2="12" y2="19" />
