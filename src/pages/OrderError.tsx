@@ -13,7 +13,7 @@ const OrderError: React.FC = () => {
         <div className="bg-white rounded-t-[20px] w-full px-6 pt-6 pb-10">
           {/* X close button */}
           <button
-            onClick={() => navigate('/home')}
+            onClick={() => navigate(-1)}
             className="text-[#181725] text-[24px] leading-none cursor-pointer"
           >
             ×
@@ -47,7 +47,7 @@ const OrderError: React.FC = () => {
         <div className="bg-white rounded-[24px] shadow-2xl w-full max-w-md px-10 py-10 flex flex-col items-center">
           {/* Close button */}
           <button
-            onClick={() => navigate('/home')}
+            onClick={() => navigate(-1)}
             className="self-start mb-4 cursor-pointer text-[#181725] w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors text-[24px] leading-none"
           >
             ×
@@ -63,8 +63,11 @@ const OrderError: React.FC = () => {
           <h2 className="font-bold text-[28px] text-[#181725] text-center mb-2">
             Oops! Order Failed
           </h2>
-          <p className="text-[#7c7c7c] text-center text-[15px] mb-8">
+          <p className="text-[#7c7c7c] text-center text-[15px] mb-1">
             Something went terribly wrong.
+          </p>
+          <p className="text-red-500 text-center text-[15px] mb-8">
+            Please Select a Payment Method.
           </p>
 
           <button
