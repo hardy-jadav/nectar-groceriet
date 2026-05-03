@@ -191,4 +191,3 @@ Preview locally:
 
 ```bash
 npm run preview
-```
