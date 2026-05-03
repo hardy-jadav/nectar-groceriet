@@ -7,7 +7,7 @@ A responsive grocery shopping app built with React, TypeScript, and Tailwind CSS
 ## Tech Stack
 
 | Tool | Version | Purpose |
-|---|---|---|
+|------|--------|---------|
 | React | 19 | UI framework |
 | TypeScript | 6 | Type safety |
 | Vite | 8 | Dev server & bundler |
@@ -20,15 +20,15 @@ A responsive grocery shopping app built with React, TypeScript, and Tailwind CSS
 
 ## Prerequisites
 
-- *Node.js* v18 or higher
-- *npm* v9 or higher
+- **Node.js** v18 or higher  
+- **npm** v9 or higher  
 
 Check your versions:
 
-bash
+```bash
 node -v
 npm -v
-
+```
 
 ---
 
@@ -36,51 +36,52 @@ npm -v
 
 ### 1. Clone the repository
 
-bash
+```bash
 git clone <repository-url>
 cd nectar-grocery
-
+```
 
 ### 2. Install dependencies
 
-bash
+```bash
 npm install
-
+```
 
 ### 3. Start the development server
 
-bash
+```bash
 npm run dev
+```
 
-
-The app will be available at *http://localhost:5173*
+The app will be available at:  
+👉 http://localhost:5173
 
 ---
 
 ## Available Scripts
 
 | Script | Command | Description |
-|---|---|---|
-| Dev server | npm run dev | Start local development server with HMR |
-| Build | npm run build | Type-check and build for production |
-| Preview | npm run preview | Preview the production build locally |
-| Lint | npm run lint | Run ESLint across the project |
+|--------|--------|-------------|
+| Dev server | `npm run dev` | Start local development server with HMR |
+| Build | `npm run build` | Type-check and build for production |
+| Preview | `npm run preview` | Preview the production build locally |
+| Lint | `npm run lint` | Run ESLint across the project |
 
 ---
 
 ## Project Structure
 
-
+```bash
 nectar-grocery/
 ├── public/
 ├── src/
-│   ├── assets/              # Images and SVGs
+│   ├── assets/                    # Images and SVGs
 │   ├── components/
 │   │   ├── common/
 │   │   │   ├── BottomNav.tsx      # Mobile bottom navigation
 │   │   │   └── SkeletonCard.tsx   # Loading skeleton
 │   │   └── layout/
-│   │       └── AppLayout.tsx      # Desktop header + sidebar + mobile nav wrapper
+│   │       └── AppLayout.tsx      # Layout wrapper (desktop + mobile)
 │   ├── data/
 │   │   └── products.ts            # Static product catalogue
 │   ├── pages/
@@ -104,28 +105,28 @@ nectar-grocery/
 │   │   ├── OrderSuccess.tsx
 │   │   └── OrderError.tsx
 │   ├── stores/
-│   │   ├── authStore.ts           # Auth state (login, phone, location)
-│   │   ├── cartStore.ts           # Cart items and totals
-│   │   ├── favoriteStore.ts       # Saved favourite products
-│   │   ├── filterStore.ts         # Category and brand filters
-│   │   ├── orderStore.ts          # Order placement and history
-│   │   └── productStore.ts        # Product loading state
+│   │   ├── authStore.ts           # Auth state
+│   │   ├── cartStore.ts           # Cart logic
+│   │   ├── favoriteStore.ts       # Favorites handling
+│   │   ├── filterStore.ts         # Filters
+│   │   ├── orderStore.ts          # Orders
+│   │   └── productStore.ts        # Product state
 │   ├── types/
-│   │   └── index.ts               # Shared TypeScript types and enums
-│   ├── App.tsx                    # Route definitions
-│   └── main.tsx                   # App entry point
+│   │   └── index.ts               # Shared types & enums
+│   ├── App.tsx                   # Routes definition
+│   └── main.tsx                  # Entry point
 ├── index.html
 ├── package.json
 ├── tsconfig.json
 └── vite.config.ts
-
+```
 
 ---
 
 ## App Routes
 
 | Path | Page | Auth Required |
-|---|---|---|
+|------|------|--------------|
 | / | Splash Screen | No |
 | /onboarding | Onboarding slides | No |
 | /auth | Auth (login/signup) | No |
@@ -149,35 +150,45 @@ nectar-grocery/
 
 ## State Management
 
-All global state is handled by *Zustand* stores:
+All global state is handled using **Zustand**:
 
 | Store | Responsibility |
-|---|---|
-| authStore | User authentication, phone number, location |
-| cartStore | Cart items, quantities, total price |
-| favoriteStore | Saved / liked products |
-| filterStore | Selected category and brand filters |
-| orderStore | Place orders, order history |
-| productStore | Product loading and caching |
+|------|----------------|
+| authStore | User authentication, phone, location |
+| cartStore | Cart items, quantities, totals |
+| favoriteStore | Saved products |
+| filterStore | Category & brand filters |
+| orderStore | Orders & history |
+| productStore | Product loading & caching |
 
 ---
 
 ## Responsive Design
 
-The app has two distinct layouts driven by Tailwind breakpoints:
+The app supports two layouts:
 
-- *Mobile* (< lg) — bottom navigation bar, full-screen pages, native device keyboard inputs
-- *Desktop* (≥ lg) — fixed top header, left sidebar navigation, multi-column grids
+### Mobile (< lg)
+- Bottom navigation
+- Full-screen pages
+- Optimized for touch
+
+### Desktop (≥ lg)
+- Fixed header
+- Sidebar navigation
+- Multi-column layout
 
 ---
 
 ## Production Build
 
-bash
+```bash
 npm run build
+```
 
+Output is generated in the `dist/` folder.
 
-Output is generated in the dist/ folder. Preview it locally:
+Preview locally:
 
-bash
+```bash
 npm run preview
+```
