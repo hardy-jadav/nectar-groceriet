@@ -187,7 +187,7 @@ npm run build
 
 Output is generated in the `dist/` folder.
 
-Preview locally:
+Preview locally...
 
 ```bash
 npm run preview
