@@ -21,7 +21,7 @@ A responsive grocery shopping app built with React, TypeScript, and Tailwind CSS
 ## Prerequisites
 
 - **Node.js** v18 or higher.
-- **npm** v9 or higher  
+- **npm** v9 or higher.  
 
 Check your versions:
 
